@@ -14,7 +14,7 @@ from rotate_image import get_rotation
 
 app = Flask(__name__)
 FILE_NAME = "info_images/volleyball.jpg"
-NGROK_URL = "http://1be2a3fc.ngrok.io"
+NGROK_URL = "http://08429529.ngrok.io"
 
 
 def resolve_url(url_link):
@@ -51,8 +51,6 @@ def message():
         print(f"resolved_url={resolved_url}")
         if received_body_msg.startswith("Image_"):
             store_file_name = f'{received_body_msg.replace("Image_", "")}.jpg'
-            # downloaded_filename = wget.download(resolved_url, out=f"{PARENT_DIRECTORY}/info_images/{store_file_name}")
-            # downloaded_filename = downloaded_filename.replace(f'{PARENT_DIRECTORY}/info_images/', "")
             r = requests.get(resolved_url, stream=True)
             with open(f"{PARENT_DIRECTORY}/info_images/{store_file_name}", "wb") as f:
                 f.write(r.content)
