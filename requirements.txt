@@ -1,0 +1,12 @@
+kiwisolver==1.1.0
+matplotlib==3.1.2
+numpy==1.18.1
+opencv-contrib-python==3.4.4.19
+Pillow==7.0.0
+python-dotenv==0.10.4
+requests==2.22.0
+scikit-image==0.16.2
+scikit-learn==0.22.1
+scipy==1.4.1
+twilio==6.35.2
+Flask==1.1.1
